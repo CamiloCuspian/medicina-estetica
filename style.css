@@ -234,12 +234,24 @@ button:before {
   height: 2px;
   bottom: 0;
   left: 0;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: bottom right;
+  width: 100%; /* Línea cubre todo el ancho */
   background: currentColor;
-  transition: transform 0.25s ease-out;
+  transform-origin: left center;
+  transform: translateX(0); /* Inicia sin desplazamiento */
+  transition: transform 0.4s ease; /* Transición suave */
 }
+
+button:hover:before {
+  transform: translateX(100%); /* Desplaza hacia la derecha */
+  transition: transform 0.4s ease; /* Transición suave al moverse */
+}
+
+button:hover:before {
+  transform-origin: left center;
+  animation: line-slide 0.8s linear;
+}
+
+
 
 button:hover:before {
   transform: scaleX(1);

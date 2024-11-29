@@ -204,7 +204,7 @@ ul li {
 
 /*boton*/
 button {
-  width: 200px;
+  width: 220px;
   height: 56px;
   overflow: hidden;
   border: none;
@@ -233,30 +233,15 @@ button:before {
   position: absolute;
   height: 2px;
   bottom: 0;
-  left: 0;
-  width: 100%; /* Línea cubre todo el ancho */
+  left: 0; /* Línea centrada inicialmente */
+  width: 50%; /* Línea ocupa la mitad del ancho */
   background: currentColor;
-  transform-origin: left center;
-  transform: translateX(0); /* Inicia sin desplazamiento */
-  transition: transform 0.4s ease; /* Transición suave */
+  transition: all 0.4s ease-out; /* Suaviza la animación */
 }
 
 button:hover:before {
-  transform: translateX(100%); /* Desplaza hacia la derecha */
-  transition: transform 0.4s ease; /* Transición suave al moverse */
-}
-
-button:hover:before {
-  transform-origin: left center;
-  animation: line-slide 0.8s linear;
-}
-
-
-
-button:hover:before {
-  transform: scaleX(1);
-  width: 150px;
-  transform-origin: bottom left;
+  left: 0; /* Línea comienza desde el inicio */
+  width: 100%; /* Línea se expande a todo el ancho */
 }
 
 button .clone > *,
@@ -301,16 +286,16 @@ button:hover .clone > :nth-child(4) {
 /* icon style and hover */
 button svg {
   width: 20px;
-  right: 0;
+  position: absolute;
+  right: 10px; /* Posición de la flecha a la derecha */
   top: 50%;
-  transform: translateY(-50%);
-  transition: 0.2s ease-out;
+  transform: translateY(-50%) rotate(180deg); /* Flecha apunta hacia el texto inicialmente */
+  transition: transform 0.4s ease; /* Suaviza el giro */
 }
 
 button:hover svg {
-  transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(0deg); /* Flecha gira hacia la derecha al hacer hover */
 }
-
 button:active {
   transform: translate(2px, 2px);
 }

@@ -94,11 +94,10 @@ img {
 ul li {
   margin: 0 0 1em;
   list-style: none;
-  
-    font-family: var(--fuenteTextos);
-    word-wrap: break-word;
-    font-size: clamp(0.6rem, 1rem + 0.4vw, 1.3rem);
-  
+
+  font-family: var(--fuenteTextos);
+  word-wrap: break-word;
+  font-size: clamp(0.6rem, 1rem + 0.4vw, 1.3rem);
 }
 /***************** ESTILOS UNIVERSALES ****************/
 .boton-whatsapp {
@@ -186,19 +185,15 @@ ul li {
     width: 170px;
 
     span {
-      color: var(--grisFuentes)
+      color: var(--grisFuentes);
     }
-
   }
 
   .logo-content {
     display: flex;
     align-items: center;
     gap: 16px;
-
-    
   }
-
 }
 .nav small {
   display: none;
@@ -207,13 +202,13 @@ ul li {
   flex-direction: row-reverse;
 }
 
-/*boton*/ 
+/*boton*/
 button {
-  width: 334px;
+  width: 200px;
   height: 56px;
   overflow: hidden;
   border: none;
-  color: var(--accion);
+  color: var(--grisFuentes);
   background: none;
   position: relative;
   cursor: pointer;
@@ -221,7 +216,7 @@ button {
   font-weight: 700;
 
   span {
-    color: var(--accion);
+    color: var(--grisFuentes);
   }
 }
 
@@ -301,7 +296,7 @@ button svg {
 }
 
 button:hover svg {
-  transform: translateY(-50%)  rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
 }
 
 button:active {
@@ -310,10 +305,15 @@ button:active {
 
 /* Header */
 .hero {
-  background: rgb(187,203,211);
-  background: linear-gradient(101deg, rgba(187,203,211,1) 0%, rgba(170,219,225,1) 16%, rgba(170,219,225,1) 100%),
+  background: rgb(187, 203, 211);
+  background: linear-gradient(
+      101deg,
+      rgba(187, 203, 211, 1) 0%,
+      rgba(170, 219, 225, 1) 16%,
+      rgba(170, 219, 225, 1) 100%
+    ),
     url("img/bgr.png");
-    background-blend-mode: overlay;
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -412,7 +412,7 @@ button:active {
 
   .galeria-contenido {
     display: grid;
-  place-content: center;
+    place-content: center;
 
     gap: 1.5rem;
 
@@ -461,8 +461,12 @@ span {
 
   p {
     font-size: clamp(1.5rem, 1.3rem + 0.5vw, 4em);
-    
-
+  }
+  button {
+    color: var(--secundario);
+    span {
+      color: var(--secundario);
+    }
   }
 
   img {
@@ -470,16 +474,16 @@ span {
     height: auto;
     box-shadow: var(--shadow);
     object-fit: cover;
-    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   img:hover {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
+  }
 }
 @media (max-width: 768px) {
   .proceso-item {
-      flex-direction: column; /* Coloca la imagen encima del párrafo */
+    flex-direction: column; /* Coloca la imagen encima del párrafo */
   }
 }
 @media (max-width: 568px) {
@@ -727,11 +731,10 @@ body {
     button {
       width: 200px;
       color: var(--grisFuentes);
-      
+
       span {
         color: var(--grisFuentes);
       }
-      
     }
 
     img {
@@ -786,15 +789,16 @@ body {
   }
 }
 
-
-
-
 /* footer */
 
 .footer {
-
-  background: rgb(187,203,211);
-  background: linear-gradient(101deg, rgba(187,203,211,1) 0%, rgba(170,219,225,1) 16%, rgba(170,219,225,1) 100%),
+  background: rgb(187, 203, 211);
+  background: linear-gradient(
+      101deg,
+      rgba(187, 203, 211, 1) 0%,
+      rgba(170, 219, 225, 1) 16%,
+      rgba(170, 219, 225, 1) 100%
+    ),
     url("img/bgr.png");
   background-blend-mode: overlay;
   background-size: cover;
@@ -809,14 +813,13 @@ body {
     flex-wrap: wrap;
     padding: 2em 0 2em;
 
-
     a {
       color: var(--accion);
       text-decoration: none;
       font-weight: bold;
       font-size: 0.9rem;
 
-      small{
+      small {
         color: var(--grisFuentes);
       }
     }
@@ -841,9 +844,7 @@ body {
     line-height: 1.1;
   }
 
-
   .beneficios_puntos li {
     text-align: left;
   }
 }
-

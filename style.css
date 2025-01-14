@@ -492,11 +492,9 @@ span {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   img:hover {
-    transform: scale(1.05);
-    -webkit-filter: brightness(1.1);
-            filter: brightness(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-out;
   }
 }
 @media (max-width: 768px) {

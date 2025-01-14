@@ -426,7 +426,6 @@ button:active {
   .galeria-contenido {
     display: grid;
     place-content: center;
-    place-items: center;
 
     gap: 1.5rem;
 
@@ -510,6 +509,10 @@ span {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+  }
+  .galeria-contenido {
+    
+    place-items: center;
   }
 }
 
